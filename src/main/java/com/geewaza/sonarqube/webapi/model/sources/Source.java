@@ -75,4 +75,20 @@ public class Source {
     public void setNew(Boolean aNew) {
         isNew = aNew;
     }
+
+    public Integer getUtLineHits() {
+        return utLineHits;
+    }
+
+    public void setUtLineHits(Integer utLineHits) {
+        this.utLineHits = utLineHits;
+    }
+
+    public Integer getLineHits() {
+        return lineHits;
+    }
+
+    public void setLineHits(Integer lineHits) {
+        this.lineHits = lineHits;
+    }
 }
