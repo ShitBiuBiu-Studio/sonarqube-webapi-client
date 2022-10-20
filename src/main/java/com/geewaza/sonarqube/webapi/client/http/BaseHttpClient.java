@@ -2,6 +2,13 @@ package com.geewaza.sonarqube.webapi.client.http;
 
 import com.geewaza.sonarqube.webapi.util.HttpResponseValidator;
 import com.geewaza.sonarqube.webapi.util.HttpResponseWrapper;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.Consts;
 import org.apache.http.NameValuePair;
@@ -22,14 +29,8 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
-
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -37,6 +38,9 @@ import java.util.Map;
  * @date 2017/6/20
  */
 public class BaseHttpClient {
+
+    private static final Logger logger = LoggerFactory.getLogger(BaseHttpClient.class);
+
     /**
      * Host url
      */
@@ -99,6 +103,9 @@ public class BaseHttpClient {
      */
     public String get(String path, Map<String, Object> params) throws IOException {
         path = appendParams(path, params);
+        if (logger.isDebugEnabled()) {
+            logger.debug("---> [SonarClient] GET {}", path);
+        }
         HttpGet getMethod = new HttpGet(this.api(path));
         CloseableHttpResponse response = (CloseableHttpResponse) this.client.execute(getMethod, this.localContext);
 
@@ -140,6 +147,9 @@ public class BaseHttpClient {
      */
     public String post(String path, Map<String, Object> params, String jsonBody) throws IOException {
 //        path = appendParams(path, params);
+        if (logger.isDebugEnabled()) {
+            logger.debug("---> [SonarClient] GET {}", path);
+        }
         HttpPost httpPost = new HttpPost(this.api(path));
 
         if (null != params && params.size() > 0) {
