@@ -2,6 +2,7 @@ package com.geewaza.sonarqube.webapi.api.projectanalyses;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
 import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.model.project.Analyses;
 import com.geewaza.sonarqube.webapi.model.project.AnalysisEvents;
 
 import java.io.IOException;
@@ -14,7 +15,7 @@ import java.util.Date;
  * @author : wangheng
  * @date : 2022-05-05 16:32
  **/
-public class SearchAnalysisService extends AbstractService<SearchAnalysisService, AnalysisEvents> {
+public class SearchAnalysisService extends AbstractService<SearchAnalysisService, Analyses> {
     public SearchAnalysisService(BaseHttpClient httpClient) {
         super(httpClient);
     }
@@ -25,8 +26,8 @@ public class SearchAnalysisService extends AbstractService<SearchAnalysisService
     }
 
     @Override
-    protected AnalysisEvents doExecute() throws IOException {
-        return doGet("api/project_analyses/search", AnalysisEvents.class);
+    protected Analyses doExecute() throws IOException {
+        return doGet("api/project_analyses/search", Analyses.class);
     }
 
     public SearchAnalysisService category(String category) {
@@ -46,6 +47,9 @@ public class SearchAnalysisService extends AbstractService<SearchAnalysisService
     }
     public SearchAnalysisService project(String project) {
         return put("project", project);
+    }
+    public SearchAnalysisService branch(String branch) {
+        return put("branch", branch);
     }
 
 }
