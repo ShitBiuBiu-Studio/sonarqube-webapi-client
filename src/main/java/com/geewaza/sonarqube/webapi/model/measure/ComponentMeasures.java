@@ -14,7 +14,7 @@ public class ComponentMeasures {
 
     private Component component;
     private Metric[] metrics;
-    private Period periods;
+    private Period period;
 
     public Component getComponent() {
         return component;
@@ -32,11 +32,11 @@ public class ComponentMeasures {
         this.metrics = metrics;
     }
 
-    public Period getPeriods() {
-        return periods;
+    public Period getPeriod() {
+        return period;
     }
 
-    public void setPeriods(Period periods) {
-        this.periods = periods;
+    public void setPeriod(Period period) {
+        this.period = period;
     }
 }

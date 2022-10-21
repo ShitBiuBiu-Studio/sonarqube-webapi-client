@@ -1,5 +1,6 @@
 package com.geewaza.sonarqube.webapi;
 
+import org.apache.commons.logging.impl.Log4JLogger;
 import org.junit.Before;
 
 import java.net.URI;
@@ -12,6 +13,7 @@ import java.net.URISyntaxException;
  * @since 2017-06-10
  */
 public class SonarIT {
+
 
     public static final String SERVER_URL = "http://10.18.104.127:9000/";
     public static final String USER = "welink";

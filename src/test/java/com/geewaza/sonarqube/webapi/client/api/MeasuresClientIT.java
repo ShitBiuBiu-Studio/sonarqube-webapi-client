@@ -39,7 +39,9 @@ public class MeasuresClientIT extends SonarIT {
                 ",new_uncovered_conditions,uncovered_lines,new_uncovered_lines,test_execution_time,test_errors" +
                 ",test_failures,tests,test_success_density,vulnerabilities,wont_fix_issues");
         ComponentMeasures result = client.getMeasuresClient().getComponentMeasures()
-                .component(project).metricKeys(metricKeys.toArray(new String[]{})).execute();
+                .component(project)
+            .metricKeys(metricKeys.toArray(new String[]{}))
+            .execute();
         System.out.println(JSONObject.toJSONString(result));
         Assert.assertNotNull(result);
     }
@@ -48,7 +50,7 @@ public class MeasuresClientIT extends SonarIT {
 
     @Test
     public void getComponentMeasuresService_02() {
-        String project = "we-link";
+        String project = "welink";
         List<String> metricKeys = ToolMethods.toStringList("new_technical_debt,blocker_violations,bugs,classes" +
                 ",code_smells,cognitive_complexity,comment_lines,comment_lines_density,branch_coverage" +
                 ",new_branch_coverage,conditions_to_cover,new_conditions_to_cover,confirmed_issues" +
@@ -68,7 +70,11 @@ public class MeasuresClientIT extends SonarIT {
                 ",new_uncovered_conditions,uncovered_lines,new_uncovered_lines,test_execution_time,test_errors" +
                 ",test_failures,tests,test_success_density,vulnerabilities,wont_fix_issues");
         ComponentMeasures result = client.getMeasuresClient().getComponentMeasures()
-                .component(project).metricKeys(metricKeys.toArray(new String[]{})).execute();
+                .component(project)
+            .branch("develop_wangheng")
+            .metricKeys(metricKeys.toArray(new String[]{}))
+            .additionalFields("period")
+            .execute();
         System.out.println(JSONObject.toJSONString(result));
         Assert.assertNotNull(result);
     }
