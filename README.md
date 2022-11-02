@@ -32,18 +32,22 @@ public class SonarClientTest {
     }
 }
 ```
-# TODO List
+# TODO List  UPDATE TO v8.7
 | API | Coding | Testing |
 |:---|---|---|
+|api/alm_integrations|[ ]|[ ]|
+|api/alm_settings|[ ]|[ ]|
 |api/authentication|[x]|[ ]|
 |api/ce|[x]|[ ]|
 |api/components|[x]|[-]|
 |api/duplications|[x]|[ ]|
 |api/favorites|[x]|[ ]|
+|api/hotspots|[ ]|[ ]|
 |api/issues|[x]|[-]|
 |api/languages|[x]|[ ]|
 |api/measures|[x]|[-]|
 |api/metrics|[x]|[ ]|
+|api/new_code_periods|[ ]|[ ]|
 |api/notifications|[x]|[ ]|
 |api/permissions|[x]|[ ]|
 |api/plugins|[x]|[ ]|
