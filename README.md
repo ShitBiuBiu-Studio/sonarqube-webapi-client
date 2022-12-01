@@ -35,14 +35,14 @@ public class SonarClientTest {
 # TODO List  UPDATE TO v8.7
 | API | Coding | Testing |
 |:---|---|---|
-|api/alm_integrations|[ ]|[ ]|
-|api/alm_settings|[ ]|[ ]|
+|api/alm_integrations|[x]|[ ]|
+|api/alm_settings|[x]|[ ]|
 |api/authentication|[x]|[ ]|
 |api/ce|[x]|[ ]|
 |api/components|[x]|[-]|
 |api/duplications|[x]|[ ]|
 |api/favorites|[x]|[ ]|
-|api/hotspots|[ ]|[ ]|
+|api/hotspots|[x]|[ ]|
 |api/issues|[x]|[-]|
 |api/languages|[x]|[ ]|
 |api/measures|[x]|[-]|
