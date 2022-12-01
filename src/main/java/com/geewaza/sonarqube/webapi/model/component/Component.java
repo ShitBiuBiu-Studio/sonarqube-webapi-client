@@ -17,6 +17,7 @@ public class Component {
     private String id;
     private String key;
     private String name;
+    private String longName;
     private String qualifier;
     private String language;
     private String path;
@@ -139,5 +140,13 @@ public class Component {
 
     public void setNeedIssueSync(Boolean needIssueSync) {
         this.needIssueSync = needIssueSync;
+    }
+
+    public String getLongName() {
+        return longName;
+    }
+
+    public void setLongName(String longName) {
+        this.longName = longName;
     }
 }

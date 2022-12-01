@@ -47,7 +47,7 @@ public class SonarClientTest {
 |api/languages|[x]|[ ]|
 |api/measures|[x]|[-]|
 |api/metrics|[x]|[ ]|
-|api/new_code_periods|[ ]|[ ]|
+|api/new_code_periods|[x]|[-]|
 |api/notifications|[x]|[ ]|
 |api/permissions|[x]|[ ]|
 |api/plugins|[x]|[ ]|

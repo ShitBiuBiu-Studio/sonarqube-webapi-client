@@ -1,0 +1,61 @@
+package com.geewaza.sonarqube.webapi.api.almintegrations;
+
+import com.geewaza.sonarqube.webapi.api.AbstractService;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
+import java.io.IOException;
+
+/**
+ * Search the Bitbucket Server repositories with REPO_ADMIN access
+ * Requires the 'Create Projects' permission
+ *
+ * @author : wangheng
+ * @date : 2022-11-16 19:59
+ **/
+public class SearchBitbucketserverReposService extends
+    AbstractService<SearchBitbucketserverReposService, String> {
+
+    public SearchBitbucketserverReposService(
+        BaseHttpClient httpClient) {
+        super(httpClient);
+    }
+
+    @Override
+    protected String[] requiredParam() {
+        return new String[]{"almSetting"};
+    }
+
+    @Override
+    protected String doExecute() throws IOException {
+        return doGet("api/alm_integrations/search_bitbucketserver_repos");
+    }
+
+    /**
+     * ALM setting key
+     *
+     * @param almSetting ALM setting key
+     * @return SearchBitbucketserverReposService
+     */
+    public SearchBitbucketserverReposService almSetting(String almSetting) {
+        return put("almSetting", almSetting);
+    }
+
+    /**
+     * Project name filter
+     *
+     * @param projectName Project name filter
+     * @return SearchBitbucketserverReposService
+     */
+    public SearchBitbucketserverReposService projectName(String projectName) {
+        return put("projectName", projectName);
+    }
+
+    /**
+     * Repository name filter
+     *
+     * @param repositoryName Repository name filter
+     * @return SearchBitbucketserverReposService
+     */
+    public SearchBitbucketserverReposService repositoryName(String repositoryName) {
+        return put("repositoryName", repositoryName);
+    }
+}

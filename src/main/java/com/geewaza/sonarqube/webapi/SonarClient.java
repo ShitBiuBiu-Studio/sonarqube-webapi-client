@@ -39,6 +39,7 @@ public class SonarClient {
     private final SettingsClient settingsClient;
     private final WebservicesClient webservicesClient;
     private final MetricsClient metricsClient;
+    private final NewCodePeriodsClient newCodePeriodsClient;
     private final MeasuresClient measuresClient;
     private final LanguagesClient languagesClient;
     private final FavoriteClient favoriteClient;
@@ -92,6 +93,7 @@ public class SonarClient {
         this.settingsClient = new SettingsClient(baseHttpClient);
         this.webservicesClient = new WebservicesClient(baseHttpClient);
         this.metricsClient = new MetricsClient(baseHttpClient);
+        this.newCodePeriodsClient = new NewCodePeriodsClient(baseHttpClient);
         this.measuresClient = new MeasuresClient(baseHttpClient);
         this.languagesClient = new LanguagesClient(baseHttpClient);
         this.favoriteClient = new FavoriteClient(baseHttpClient);
@@ -360,6 +362,15 @@ public class SonarClient {
     }
 
     /**
+     * Get NewCodePeriods API Client
+     *
+     * @return NewCodePeriods
+     */
+    public NewCodePeriodsClient getNewCodePeriodsClient() {
+        return this.newCodePeriodsClient;
+    }
+
+    /**
      * Get Measures API Client
      *
      * @return MeasuresClient
@@ -385,4 +396,5 @@ public class SonarClient {
     public FavoriteClient getFavoriteClient() {
         return this.favoriteClient;
     }
+
 }
