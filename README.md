@@ -1,6 +1,6 @@
 # sonarqube-webapi-client
  A Java client for interacting with the SonarQube server via Sonarqube web apis. \
- For SonarQube Version 7.9.5 . 
+ For SonarQube Version 8.7 . 
 # User Guide
 
 ```java
@@ -35,14 +35,14 @@ public class SonarClientTest {
 # TODO List  UPDATE TO v8.7
 | API | Coding | Testing |
 |:---|---|---|
-|api/alm_integrations|[ ]|[ ]|
-|api/alm_settings|[ ]|[ ]|
+|api/alm_integrations|[x]|[ ]|
+|api/alm_settings|[x]|[ ]|
 |api/authentication|[x]|[ ]|
 |api/ce|[x]|[ ]|
 |api/components|[x]|[-]|
 |api/duplications|[x]|[ ]|
 |api/favorites|[x]|[ ]|
-|api/hotspots|[ ]|[ ]|
+|api/hotspots|[x]|[ ]|
 |api/issues|[x]|[-]|
 |api/languages|[x]|[ ]|
 |api/measures|[x]|[-]|

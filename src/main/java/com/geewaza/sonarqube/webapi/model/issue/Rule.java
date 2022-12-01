@@ -15,6 +15,8 @@ public class Rule {
     private String lang;
     private String status;
     private String langName;
+    private String securityCategory;
+    private String vulnerabilityProbability;
 
     public void setKey(String key) {
         this.key = key;
@@ -56,4 +58,19 @@ public class Rule {
         return langName;
     }
 
+    public String getSecurityCategory() {
+        return securityCategory;
+    }
+
+    public void setSecurityCategory(String securityCategory) {
+        this.securityCategory = securityCategory;
+    }
+
+    public String getVulnerabilityProbability() {
+        return vulnerabilityProbability;
+    }
+
+    public void setVulnerabilityProbability(String vulnerabilityProbability) {
+        this.vulnerabilityProbability = vulnerabilityProbability;
+    }
 }
