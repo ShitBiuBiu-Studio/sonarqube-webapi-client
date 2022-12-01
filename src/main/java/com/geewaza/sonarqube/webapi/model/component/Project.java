@@ -11,6 +11,7 @@ public class Project {
     private String key;
     private String name;
     private String qualifier;
+    private String longName;
 
     public String getKey() {
         return key;
@@ -34,5 +35,13 @@ public class Project {
 
     public void setQualifier(String qualifier) {
         this.qualifier = qualifier;
+    }
+
+    public String getLongName() {
+        return longName;
+    }
+
+    public void setLongName(String longName) {
+        this.longName = longName;
     }
 }

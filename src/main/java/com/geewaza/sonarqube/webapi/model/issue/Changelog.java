@@ -14,6 +14,7 @@ public class Changelog {
     private String avatar;
     private Date creationDate;
     private Diff[] diffs;
+    private Boolean isUserActive;
 
     public String getUser() {
         return user;
@@ -53,5 +54,13 @@ public class Changelog {
 
     public void setDiffs(Diff[] diffs) {
         this.diffs = diffs;
+    }
+
+    public Boolean getUserActive() {
+        return isUserActive;
+    }
+
+    public void setUserActive(Boolean userActive) {
+        isUserActive = userActive;
     }
 }
