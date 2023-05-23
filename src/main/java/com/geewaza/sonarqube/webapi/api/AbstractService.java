@@ -3,12 +3,11 @@ package com.geewaza.sonarqube.webapi.api;
 import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.SonarQubeException;
 import com.google.common.collect.Maps;
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * <p></p>
