@@ -19,6 +19,8 @@ public class Source {
     private Boolean isNew;
     private Integer utLineHits;
     private Integer lineHits;
+    private Integer conditions;
+    private Integer coveredConditions;
 
     public Integer getLine() {
         return line;
@@ -90,5 +92,21 @@ public class Source {
 
     public void setLineHits(Integer lineHits) {
         this.lineHits = lineHits;
+    }
+
+    public Integer getConditions() {
+        return conditions;
+    }
+
+    public void setConditions(Integer conditions) {
+        this.conditions = conditions;
+    }
+
+    public Integer getCoveredConditions() {
+        return coveredConditions;
+    }
+
+    public void setCoveredConditions(Integer coveredConditions) {
+        this.coveredConditions = coveredConditions;
     }
 }
