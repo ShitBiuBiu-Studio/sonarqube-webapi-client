@@ -40,12 +40,12 @@
     <snapshotRepository>
       <id>github</id>
       <name>GitHub frank59 Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/ShitBiuBiu-Studio/sonarqube-api-client</url>
+      <url>https://maven.pkg.github.com/shitbiubiu-studio/sonarqube-api-client</url>
     </snapshotRepository>
     <repository>
       <id>github</id>
       <name>GitHub frank59 Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/ShitBiuBiu-Studio/sonarqube-api-client</url>
+      <url>https://maven.pkg.github.com/shitbiubiu-studio/sonarqube-api-client</url>
     </repository>
   </distributionManagement>
   <licenses></licenses>
